@@ -5,6 +5,10 @@
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
+  color:hsl(0, 0%, 47%);
+}
+p{
+  margin: 0 0 16px
 }
 h1,
 h2 {
@@ -22,9 +26,13 @@ h2 {
   line-height: 1.2;
   margin-bottom: 16px;
 }
+h4{
+  font-size: 18px;
+  font-weight:300;
+}
 ion-icon {
   color: hsl(34, 93%, 52%);
-  font-size: xx-large;
+  font-size: 50px;
 }
 button {
   padding: 0.5%;
@@ -41,8 +49,10 @@ button {
   justify-content: space-around;
   align-content: center;
   position: fixed;
-  background-color: hsl(199, 11%, 38%);
-  height: 80px;
+  background: transparent;
+  border-bottom:solid 1px grey;
+  /* background-color: hsl(199, 11%, 38%); */
+  height: 70px;
   width: 100%;
   z-index: 3;
 }
@@ -66,32 +76,40 @@ button {
   transition: 0.4s;
 }
 .slogan {
-  height: 500px;
+  width:100%;
+  height: 668px;
   background-color: hsl(199, 11%, 38%);
+  /* display: flex; */
 }
 .slog {
   color: hsl(0, 0%, 100%);
-  width: 30%;
+  width: 100%;
+max-width: 700px;
   height: 100%;
   text-align: center;
-  display: flex;
+  /* display: flex; */
+  flex-wrap: wrap;
   flex-direction: column;
   margin: 0 auto;
+  align-content: center;
+  align-items: center;
   justify-content: center;
-  gap: 2%;
+  gap: 1%;
 }
+
 .howitworks-container {
   display: flex;
+  padding:5% 5%;
   flex-direction: column;
   align-items: center;
-  height: 300px;
+  height: 420px;
   background-color: hsl(0, 0%, 98%);
 }
 .card-container {
   display: flex;
   justify-content: center;
   height: 100%;
-  gap: 10%;
+  gap: 3%;
 }
 .card {
   display: flex;
@@ -99,61 +117,163 @@ button {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 100%;
+  width: 30%;
   gap: 10%;
+}
+.card h4 {
+  color:hsl(0, 0%, 0%)
 }
 .property-container {
   display: flex;
+  /* flex-wrap: wrap; */
   flex-direction: column;
-  gap: 10%;
-  padding: 16px;
-  height: 300px;
+  align-content: center;
+  /* gap: 10%; */
+  width:100%;
+  padding: 5% 11% 0;
+  height: 450px;
 }
 .property-card-container {
   display: flex;
-  height: 100%;
+  padding: 0 1% 0;
+  height: 40%;
+  width:100%;
 }
 .property-card {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-  gap: 10%;
+  gap: 7%;
 }
-
+.price{
+  font-size:18px;
+  color:hsl(210, 10%, 23%);
+  font-weight:600;
+}
 .baths,
 .beds {
   padding-right: 3%;
   border-right: solid 1px black;
 }
+.baths,
+.beds, .sqft, .location{
+  font-size:12.8px
+}
 .property-info {
   display: flex;
-  gap: 3%;
+  gap: 3%
 }
 #listing-btn {
   align-self: center;
+  font-size: large;
+  height: 45px;
 }
 .agent-container{
-    flex-wrap: wrap;
     display:flex;
     flex-direction:column;
     align-content:center;
+    gap:10%;
     width:100%;
-    height:350px;
+    height:700px;
+    padding: 5.5% 11% 0;
     border-bottom: solid 1px hsl(0, 0%, 80%);
 }
 .realtor-card-container{
 display: flex;
-justify-content: center;
+/* justify-content: center; */
 flex-wrap: wrap;
-row-gap:25%;
-column-gap:1%;
+height:50%;
+row-gap: 10%;
+column-gap:2%;
 
 }
 .realtor-card{
+  padding:1%;
     display:flex;
     flex-direction: column;
-    width:30%;
-    /* gap:3%; */
+    width:32%;
+    gap:10%;
+    height:35%;
     background-color:hsl(0, 0%, 90%);
+}
+.realtor-card h3{
+  color:hsl(0, 0%, 0%);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.bestestate-container{
+ display:flex;
+ flex-wrap: wrap;
+ height:800px;
+ /* justify-content: center; */
+ align-content: center;
+ padding: 5.5% 11% 0;
+ margin-bottom: 7%;
+}
+.bestestate-container img{
+  width:60%
+}
+.bestestate-info{
+  display: flex;
+  flex-direction: column;
+  width:31%;
+  gap:2%;
+  height:100%;
+}
+.bestestate-info ul{
+  display:flex;
+  flex-direction: column;
+  height: 30%;
+  gap:7%;
+}
+.large{
+  font-size: 20px;
+  font-weight: 300;
+}
+#learn-btn{
+
+  width:38%;
+  height: 45px;
+  font-size: 16px;
+}
+.service-cont{
+  background-color: hsl(0, 0%, 98%);
+  height: 550px;
+  border-bottom: 1px solid hsl(0, 0%, 47%);
+}
+.services h2{
+  text-align: center;
+  padding-top: 4%;
+}
+.service-card-container{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5.5% 12% 0;
+  width:100%;
+  height: 80%;
+  gap:5%;
+  row-gap: 3%;
+}
+.service-card{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width:30%;
+  height: 20%;
+  gap:10%;
+}
+.service-desc{
+  display: flex;
+  flex-direction: column;
+  width:60%
+}
+.service-desc a {
+  color: hsl(34, 93%, 52%);
+  text-decoration: none;
+}
+@media (min-width:600px){
+  .slog{
+    width:80%;
+  }
 }
