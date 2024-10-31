@@ -30,11 +30,15 @@ h4{
   font-size: 18px;
   font-weight:300;
 }
+h5{
+  font-size:16px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
 ion-icon {
   color: hsl(34, 93%, 52%);
   font-size: 50px;
 }
-button {
+.btn {
   padding: 0.5%;
   background-color: hsl(34, 93%, 52%);
   color: hsl(0, 0%, 100%);
@@ -77,7 +81,7 @@ button {
 }
 .slogan {
   width:100%;
-  height: 668px;
+  height: 768px;
   background-color: hsl(199, 11%, 38%);
   /* display: flex; */
 }
@@ -123,8 +127,7 @@ max-width: 700px;
 .card h4 {
   color:hsl(0, 0%, 0%)
 }
-.properties{
-  height: 550px;}
+
 .property-container {
   display: flex;
   flex-wrap: wrap;
@@ -174,22 +177,24 @@ max-width: 700px;
   font-size: large;
   height: 45px;
 }
+/* ------------------------------------------agents------------------------------------ */
 .agent-container{
     display:flex;
     flex-direction:column;
     align-content:center;
     gap:5%;
-    width:100%;
-    height:1000px;
-    padding: 5.5% 11% 0;
+    height: 100%;
+    padding: 5.5% 11% 5%;
     border-bottom: solid 1px hsl(0, 0%, 80%);
 }
 .realtor-card-container{
 display: flex;
 /* justify-content: center; */
+flex-direction: row;
 flex-wrap: wrap;
-height:50%;
-row-gap: 10%;
+width:100%;
+height:100%;
+row-gap: 20px;
 column-gap:2%;
 
 }
@@ -197,9 +202,9 @@ column-gap:2%;
   padding:1%;
     display:flex;
     flex-direction: column;
-    width:32%;
     gap:3%;
-    height:50%;
+    width:31.3%;
+    
     background-color:hsl(0, 0%, 90%);
 }
 .realtor-card h3{
@@ -210,10 +215,11 @@ column-gap:2%;
   width:100px;
   border-radius: 70px;
 }
+/* ---------------------------------------------best estate------------------------------------ */
 .bestestate-container{
  display:flex;
  flex-wrap: wrap;
- height:800px;
+ /* height:800px; */
  /* justify-content: center; */
  align-content: center;
  padding: 5.5% 11% 0;
@@ -247,9 +253,13 @@ column-gap:2%;
   height: 45px;
   font-size: 16px;
 }
+/* ------------------------------------------service---------------------------- */
 .service-cont{
+  display: flex;
+  flex-direction:column;
   background-color: hsl(0, 0%, 98%);
-  height: 550px;
+  /* height: 550px; */
+  padding-bottom:3%;
   border-bottom: 1px solid hsl(0, 0%, 47%);
 }
 .services h2{
@@ -260,18 +270,17 @@ column-gap:2%;
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 5.5% 12% 0;
+  /* padding: 5.5% 12% 0; */
   width:100%;
-  height: 80%;
+
   gap:5%;
-  row-gap: 3%;
+  row-gap: 20px;
 }
 .service-card{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width:30%;
-  height: 20%;
   gap:10%;
 }
 .service-desc{
@@ -283,8 +292,8 @@ column-gap:2%;
   color: hsl(34, 93%, 52%);
   text-decoration: none;
 }
+/* ---------------------------------------testimonial---------------------------------- */
 .client-say{
-  height:400px;
   text-align: center;
   margin: 5% 0;
 }
@@ -293,13 +302,12 @@ column-gap:2%;
   padding: 2% 0;
   font-size: 24px;
   font-style: italic;
-  max-width: 740px;
+  width: 56%;
 }
 .testimonial-client{
   display: flex;
   flex-wrap:wrap;
   gap:1%;
-
   justify-content: center;
   align-items: center;
 }
@@ -307,12 +315,12 @@ column-gap:2%;
   width:80px;
   border-radius: 60%;
 }
-
+/* -----------------------------contact-------------------------- */
 .contact-container{
   display:flex;
-  padding: 5% 0;
+  
   flex-direction: column;
-  height:700px;
+  height:750px;
   width: 100%;
   gap: 3%;
   background-color: hsl(0, 0%, 97%);
@@ -323,22 +331,23 @@ column-gap:2%;
 .info{
   display: flex;
   height: 100%;
-  gap:5%;
+  padding: 0 48px;
+  gap:2%;
   justify-content: center;
 }
 .form{
   display:flex;
   flex-direction:column;
   padding:1%;
-  width:35%;
-  height:100%;
+  width:58%;
+  height:90%;
   /* gap:5%; */
   background-color: hsl(0, 0%, 100%);
 }
 .form button{
   margin-top:20px;
   width: 130px;
-  height: 40px;
+  height: 30px;
   padding:1%;
 }
 .form label{
@@ -364,8 +373,8 @@ column-gap:2%;
   display: flex;
   flex-direction: column;
   background-color: hsl(0, 0%, 100%);
-  height: 55%;
-  width:38%;
+  height: 35%;
+  /* width:38%; */
   padding:1%;
   font-size: 13px;
 }
@@ -381,8 +390,138 @@ address{
   color: hsl(34, 93%, 52%);
   padding-bottom:40px;
 }
-@media (min-width:600px){
+/* ------------------------------footer------------------------------------------ */
+footer{
+  width: 100%;
+  height:600px;
+  padding: 128px 0;
+  background-color:  hsl(0, 0%, 20%);
+}
+footer h5{
+  color:hsl(0, 0%, 100%);
+  font-weight:300;
+}
+.footer-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin: auto;
+  /* height: 288px; */
+  padding: 0px  20px;
+  padding-bottom: 6rem;
+}
+.footer-container a{
+  text-align: center;
+  color: hsl(0, 0%, 46%);
+  text-decoration: none;
+  
+  font-size: 16px;
+  transition: 5ms;
+}
+.footer-container a:hover{
+  color: white;
+}
+.about{
+  width:488px;
+  height:192px;
+
+}
+.subscribe{
+  
+  width: 371px;
+  height:192px;
+}
+#sub-btn{
+  border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-size: 16px;
+  background-color: hsl(34, 93%, 52%);
+    color: hsl(0, 0%, 0%);
+    padding: 10px 10px 9px;
+    line-height: 1.5;
+    cursor: pointer;
+    border: none;
+    margin-right: 8.3%;
+    position: absolute;
+    right: 0;
+    width:100px
+    }
+.footer-container input{
+  border-radius: 30px;
+  height: 43px;
+  font-family: "Roboto", "Helvetica", "Sans-serif";
+  border: 1px solid hsl(0, 0%, 38%);
+  background-color: transparent;
+  font-size: 16px;
+  padding: 10px;
+  color: hsl(0, 0%, 100%);
+  box-sizing: border-box;
+  width: 100%;
+}
+.quick-links{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap:5%;
+  width:165px;
+  height: 192px;
+  font-size: 23px;
+  
+}
+.icon-footer{
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  height: 10px;
+  position:absolute;
+}
+.footer-container ion-icon{
+  font-size: 20px;
+  margin-top: 1%;
+  color: hsl(0, 0%, 47%);
+}
+.copyright{
+  width: 70%;
+  text-align: center;
+  padding-top:5%;
+  border-top: 0.2px solid hsl(0, 0%, 47%);
+  font-size:17px;
+  color:hsl(0, 0%, 47%) ;
+  margin: 0 auto;
+}
+.copyright ion-icon{
+  color: hsl(0, 0%, 47%);
+  font-size:17px;
+}
+@media (max-width:600px){
   .slog{
     width:80%;
   }
+  .service-card-container{
+    flex-direction: column;
+    align-content: center;
+  }
+  .service-card{
+    width:100%;
+  }
+  .bestestate-info{
+    width:60%;
+  }
+  .bestestate-container{
+    flex-direction: column;
+  }
+  .realtor-card-container{
+    flex-direction: column;
+    align-content: center;
+  }
+  .realtor-card{
+    width:100%;
+  }
+ .property-card-container{
+  flex-direction: column;
+  gap:5%;
+ }
+ .testimonial p {
+  width:60%;
+ }
 }
