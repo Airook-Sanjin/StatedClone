@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <div class="head-container">
+      <div id="head-container">
         <a id="logo" href="http://" target="_blank" rel="noopener noreferrer"
           >STATED.</a
         >
@@ -425,6 +425,29 @@
         <p>Copyright © 2019 All rights reserved | This template is made with <ion-icon name="heart"></ion-icon> by Colorlib</p></p>
       </div>
     </footer>
+    <script>
+      window.addEventListener("scroll", function(){
+        let nav = document.getElementsByClassName("nav-link");
+        let log = document.getElementById("logo");
+          let header = document.getElementById("head-container");
+          if(window.scrollY >75){
+            for(i=0; i<nav.length; i++){
+             nav[i].classList.add("scrolled");
+            }
+              header.classList.add("scrolled");
+              log.classList.add ("scrolled");
+          }
+          else{
+            for(i=0; i<nav.length; i++){
+              nav[i].classList.remove("scrolled")
+            }
+              header.classList.remove("scrolled");
+              log.classList.remove ("scrolled");
+              
+          }
+      });
+  </script>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
