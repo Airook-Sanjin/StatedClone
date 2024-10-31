@@ -283,24 +283,54 @@ column-gap:2%;
   color: hsl(34, 93%, 52%);
   text-decoration: none;
 }
-.contact{
-  background-color: hsl(0, 0%, 90%);
-  display: flex;
-  flex-direction: column;
-  height:100%;
+.client-say{
+  height:400px;
+  text-align: center;
+  margin: 5% 0;
 }
+.testimonial p{
+  margin:0 auto;
+  padding: 2% 0;
+  font-size: 24px;
+  font-style: italic;
+  max-width: 740px;
+}
+.testimonial-client{
+  display: flex;
+  flex-wrap:wrap;
+  gap:1%;
+
+  justify-content: center;
+  align-items: center;
+}
+.testimonial-client img{
+  width:80px;
+  border-radius: 60%;
+}
+
 .contact-container{
   display:flex;
-  flex-direction: row;
-  height:440px;
+  padding: 5% 0;
+  flex-direction: column;
+  height:700px;
   width: 100%;
-  gap: 5%;
+  gap: 3%;
+  background-color: hsl(0, 0%, 97%);
+}
+.contact-container h2{
+  text-align: center;
+}
+.info{
+  display: flex;
+  height: 100%;
+  gap:5%;
+  justify-content: center;
 }
 .form{
   display:flex;
   flex-direction:column;
   padding:1%;
-  width:40%;
+  width:35%;
   height:100%;
   /* gap:5%; */
   background-color: hsl(0, 0%, 100%);
@@ -311,31 +341,40 @@ column-gap:2%;
   height: 40px;
   padding:1%;
 }
+.form label{
+  margin-top:32px;
+}
 #name, #email, #subject{
-  border-radius: 10px;
-  height: 30px;
-  border: .5px solid grey;
+  
+  border-radius: 20px;
+  height: 43px;
+  width:100%;
+  font-size: 16px;
+  padding:10px;
+  border: .5px solid hsl(0, 0%, 82%);
 } 
 #message{
-  height:100px;
+  
+  height:170px;
   border-radius: 10px;
-  border: .5px solid grey;
-
-
+  border: .5px solid hsl(0, 0%, 82%);
 }
 
 .contactInfo{
   display: flex;
   flex-direction: column;
   background-color: hsl(0, 0%, 100%);
-  height: 100%;
-  width:20%;
+  height: 55%;
+  width:38%;
+  padding:1%;
+  font-size: 13px;
 }
 address{
   padding-bottom:40px;
 }
 .contactInfo h4{
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 13px;;
 
 }
 .contactInfo a{
