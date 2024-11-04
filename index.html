@@ -93,7 +93,12 @@
     </section>
     <section class="properties">
       <div class="property-container">
-        <h2>Properties</h2>
+        <div class="property-align"><h2>Properties</h2>
+          <button class = "slide" id="prev-btn">&#8810;</button>
+          <button class = "slide" id="next-btn">&#8811; </button>
+          </div>
+        
+        <div class="carousel">
         <div class="property-card-container">
           <div class="property-card">
             <img
@@ -113,8 +118,8 @@
             <img
               src="https://images.harstatic.com/745085/post_0027d9bc1a8faab8b529da3e3e2abc9e.png"
               alt="Property 2"
-              srcset=""
-            />
+              srcset=""/>
+            
             <h4 class="price">$3,400,000</h4>
             <div class="property-info">
               <p class="beds">6 beds</p>
@@ -151,6 +156,35 @@
             </div>
             <p class="location">480 12th, Unit 14, San Francisco, CA</p>
           </div>
+          <div class="property-card">
+            <img
+              src="https://fancyhouse-design.com/wp-content/uploads/2024/04/Modern-home-design-embraces-clean-lines-and-clutter-free-living-creating-serene-environments.jpg"
+              alt="Property 4"
+              srcset=""
+            />
+            <h4 class="price">$3,400,000</h4>
+            <div class="property-info">
+              <p class="beds">6 beds</p>
+              <p class="baths">4 baths</p>
+              <p class="sqft">4,250 sqft</p>
+            </div>
+            <p class="location">480 12th, Unit 14, San Francisco, CA</p>
+          </div>
+          <div class="property-card">
+            <img
+              src="https://www.bhg.com/thmb/-0gVKRCc_IlAtISO_aSPSeYqJ28=/1244x0/filters:no_upscale():strip_icc()/slim-modern-two-story-home-design-1e53f900-28cf1e9173e3407f833ce7ccaa10c9c3.jpg"
+              alt="Property 4"
+              srcset=""
+            />
+            <h4 class="price">$3,400,000</h4>
+            <div class="property-info">
+              <p class="beds">6 beds</p>
+              <p class="baths">4 baths</p>
+              <p class="sqft">4,250 sqft</p>
+            </div>
+            <p class="location">480 12th, Unit 14, San Francisco, CA</p>
+          </div>
+        </div>
         </div>
         <button class ="btn" id="listing-btn">View All Property Listing</button>
       </div>
@@ -338,21 +372,60 @@
     </section>
     <section class="client-say">
       <h2>What Our Clients Are Saying</h2>
-      <div class="testimonial">
-        <p>
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-          nostrum vitae explicabo dolore ratione. Quia iure quod ipsa blanditiis
-          sint nulla a nam veritatis ex eos. Dicta molestiae dolorum
-          laudantium."
-        </p>
+      <div class="testimonial-carousel">
+        <div class="testimonial-container">
+        <div class="testimonial">
+          <p>
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+            nostrum vitae explicabo dolore ratione. Quia iure quod ipsa blanditiis
+            sint nulla a nam veritatis ex eos. Dicta molestiae dolorum
+            laudantium."
+          </p>
+          <div class="testimonial-client">
+            <img
+              src="https://imgcdn.stablediffusionweb.com/2024/5/2/0b0209ce-412b-49cd-a30b-60d907adc7e4.jpg"
+              alt="Client"
+            />
+            <p>John Smith</p>
+          </div>
+        </div>
+        
+        <div class="testimonial">
+          <p>
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+            nostrum vitae explicabo dolore ratione. Quia iure quod ipsa blanditiis
+            sint nulla a nam veritatis ex eos. Dicta molestiae dolorum
+            laudantium."
+          </p>
+          <div class="testimonial-client">
+            <img
+              src="https://pbs.twimg.com/profile_images/255161229/Alexander_Hamilton_portrait_by_John_Trumbull_1806_400x400.jpg"
+              alt="Client"
+            />
+            <p>Alexander Hamilton</p>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p>
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+            nostrum vitae explicabo dolore ratione. Quia iure quod ipsa blanditiis
+            sint nulla a nam veritatis ex eos. Dicta molestiae dolorum
+            laudantium."
+          </p>
+          <div class="testimonial-client">
+            <img
+              src="https://hips.hearstapps.com/hmg-prod/images/john-adams-gettyimages-3246312.jpg?crop=1xw:0.999537037037037xh;center,top&resize=1200:*"
+              alt="Client"
+            />
+            <p>John Adams</p>
+          </div>
+        </div>
+        
       </div>
-      <div class="testimonial-client">
-        <img
-          src="https://imgcdn.stablediffusionweb.com/2024/5/2/0b0209ce-412b-49cd-a30b-60d907adc7e4.jpg"
-          alt="Client"
-        />
-        <p>John Smith</p>
+        <button class="slide" id ="prev-Testbtn">&#8810;</button>
+        <button class = "slide" id="next-Testbtn">&#8811; </button>
       </div>
+      
     </section>
     <section id="contact-sec">
       <div class="contact">
@@ -446,6 +519,57 @@
               
           }
       });
+      let currentPropertyIndex = 0;
+      let cards = document.querySelectorAll(".property-card");
+      let totalCards = cards.length;
+      document.getElementById('next-btn').addEventListener('click', function(){
+        if (currentPropertyIndex < totalCards - 3) {
+          currentPropertyIndex++;
+        }else{
+          currentPropertyIndex = 0;
+        }
+        updateCarousel()
+        });
+        document.getElementById('prev-btn').addEventListener('click', function(){
+        if (currentPropertyIndex > 0) {
+          currentPropertyIndex--;
+        }else{
+          currentPropertyIndex = totalCards - 1;
+        }
+        updateCarousel()
+        });
+        function updateCarousel(){
+          let propertyCardContainer = document.querySelector('.property-card-container')
+          let offset = -currentPropertyIndex * (300 + 50); 
+          propertyCardContainer.style.transform =`translateX(${offset}px)`
+        }
+        // ------------End of Property carouesel--------------
+        let currentTestimonialIndex = 0;
+        let testimonialCards = document.querySelectorAll(".testimonial");
+        let totalTestimonialCards = testimonialCards.length;
+        document.getElementById("next-Testbtn").addEventListener('click', function(){
+          if (currentTestimonialIndex < totalTestimonialCards - 1){
+            currentTestimonialIndex++;
+          }else{
+            currentTestimonialIndex = 0;
+          }
+          updateTestimonial()
+        })
+        document.getElementById("prev-Testbtn").addEventListener('click', function(){
+          if(currentTestimonialIndex > 0){
+            currentTestimonialIndex--;
+          }else {
+            currentTestimonialIndex = totalTestimonialCards - 1;
+          }
+          updateTestimonial()
+        })
+        function updateTestimonial(){
+          let testimonialContainer = document.querySelector('.testimonial-container')
+          let testOffset = -currentTestimonialIndex * (700 + 450);
+          testimonialContainer.style.transform = `translateX(${testOffset}px)`
+        }
+        
+
   </script>
 
     <script
